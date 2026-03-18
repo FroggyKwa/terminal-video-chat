@@ -1,8 +1,12 @@
-[package]
-name = "anteros"
-version = "0.1.0"
-edition = "2021"
+[workspace]
+members = [
+    "anteros",
+    "crates/network",
+    "crates/media",
+    "crates/protocol",
+    "crates/config",
+    "crates/logging",
+    "frontends/tui"
+]
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
+resolver = "2"

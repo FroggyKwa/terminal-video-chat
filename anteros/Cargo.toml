@@ -1,0 +1,12 @@
+[package]
+name = "anteros"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+config = { path = "../crates/config" }
+logging = { path = "../crates/logging" }
+media = { path = "../crates/media" }
+network = { path = "../crates/network" }
+protocol = { path = "../crates/protocol" }
+tui = { path = "../frontends/tui" }
