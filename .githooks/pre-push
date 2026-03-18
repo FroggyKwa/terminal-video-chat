@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "pre-push: cargo check --workspace"
+cargo check --workspace
+
+echo "pre-push: cargo test --workspace"
+cargo test --workspace
+
+echo "pre-push: cargo clippy --workspace --all-targets -- -D warnings"
+cargo clippy --workspace --all-targets -- -D warnings
