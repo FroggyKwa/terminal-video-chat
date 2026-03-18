@@ -24,10 +24,10 @@ impl AppConfig {
         let mut iter = args.into_iter();
 
         while let Some(arg) = iter.next() {
-            if arg == "--frontend" {
-                if let Some(value) = iter.next().and_then(|value| Frontend::parse(&value)) {
-                    frontend = value;
-                }
+            if arg == "--frontend"
+                && let Some(value) = iter.next().and_then(|value| Frontend::parse(&value))
+            {
+                frontend = value;
             }
         }
 
